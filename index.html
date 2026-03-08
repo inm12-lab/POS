@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>PRO Shop POS</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Shop POS</h1>
+
+<div class="pos-container">
+
+<div class="inventory">
+
+<h2>Inventory</h2>
+
+<input id="search" placeholder="Search product..." onkeyup="searchProduct()">
+
+<ul id="productList"></ul>
+
+<h3>Add Product</h3>
+
+<input id="name" placeholder="Product Name">
+<input id="price" placeholder="Price" type="number">
+<input id="code" placeholder="Barcode / Code">
+
+<button onclick="addProduct()">Add Product</button>
+
+</div>
+
+
+<div class="cart">
+
+<h2>Cart</h2>
+
+<input id="barcodeInput" placeholder="Scan barcode..." onkeypress="barcodeScan(event)">
+
+<ul id="cartList"></ul>
+
+<h3>Total: $<span id="total">0</span></h3>
+
+<button onclick="checkout()">Checkout</button>
+<button onclick="printReceipt()">Print Receipt</button>
+
+</div>
+
+</div>
+
+
+<div class="report">
+
+<h2>Sales Report</h2>
+
+<p>Today Revenue: $<span id="todayRevenue">0</span></p>
+
+<button onclick="exportCSV()">Export Sales CSV</button>
+
+<ul id="salesHistory"></ul>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
